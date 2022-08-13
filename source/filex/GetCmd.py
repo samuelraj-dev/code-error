@@ -15,13 +15,12 @@ def GetCmd(ask=False):
             audio_data = r.recognize_google(audio)
             audio_data = audio_data.lower()
             print(f'>> User Said: {audio_data}')
+            return audio_data
 
         except sr.UnknownValueError:
             audio_data = ''
-            GetCmd()
+            return audio_data
 
         except sr.RequestError:
             audio_data = ''
-            GetCmd()
-
-        return audio_data
+            return audio_data
