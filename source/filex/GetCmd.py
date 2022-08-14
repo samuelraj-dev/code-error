@@ -1,5 +1,7 @@
 import speech_recognition as sr
 
+from source.filex.Talk import Talk
+
 r = sr.Recognizer()
 
 
@@ -19,8 +21,10 @@ def GetCmd(ask=False):
 
         except sr.UnknownValueError:
             audio_data = ''
+            Talk('Your audio wasn\'t clear, please try again')
             return audio_data
 
         except sr.RequestError:
             audio_data = ''
+            Talk('Application error!')
             return audio_data

@@ -63,5 +63,10 @@ def RunCmd():
             audio_data = ''
             Talk('Sorry didn\'t get it')
             RunCmd()
+
+    elif audio_data == '':
+        print(f'>> audio not clear. so ignored...\n')
+
     else:
         print(f'>> No \'david\' in command. so ignored...\n')
+        Talk(f'>> No \'david\' in command. so ignored...\n')
