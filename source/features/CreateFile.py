@@ -9,7 +9,6 @@ def GetContent(audio_data):
     if file_content != '':
         DumpContent(audio_data, file_content)
     else:
-        Talk(f'Audio not clear for {audio_data}.txt, try again!')
         GetContent(audio_data)
 
 def DumpContent(audio_data, file_content):
@@ -26,7 +25,7 @@ def CreateFile(audio_data):
 
     with open(f'C:\\david\\{audio_data}.txt', 'w') as file:
         audio_data = audio_data.strip()
-        print(f'>> Successfully created \'{audio_data}.txt\'...\n')
+        print(f'>> Successfully created \'{audio_data}.txt\'...\n');
         Talk(f'successfully created {audio_data}.txt...')
 
     GetContent(audio_data)

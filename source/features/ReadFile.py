@@ -6,9 +6,8 @@ NotFound = True
 def ReadFile(audio_data):
     path = 'C:\\david'
     file_list = os.listdir(path)
-    select = ''
 
-    audio_data = audio_data.replace('read', '')
+    audio_data = audio_data.replace('read', '').replace('reed', '').replace('reid', '')
     audio_data = audio_data.strip()
 
     for file in file_list:
